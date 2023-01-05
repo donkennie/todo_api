@@ -11,6 +11,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
+      # Add more fields
+      t.string :first_name, default: "", null: false
+      t.string :last_name, default: "", null: false
+
       ## Rememberable
       t.datetime :remember_created_at
 
