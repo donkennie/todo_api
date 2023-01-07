@@ -1,5 +1,6 @@
 class TodolistsController < ApplicationController
-  before_action :set_todolist, only: %i[ show update destroy ]
+  before_action :set_todolist, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: [:create]
 
   # GET /todolists
   def index
